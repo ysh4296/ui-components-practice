@@ -10,6 +10,7 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@faker-js/faker": "^10.5.0",
     "@tanstack/react-devtools": "^0.2.2",
     "@tanstack/react-router": "^1.130.2",
     "@tanstack/react-router-devtools": "^1.131.5",
@@ -20,7 +21,6 @@
     "sass": "^1.92.1"
   },
   "devDependencies": {
-    "@faker-js/faker": "^10.5.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.2.0",
     "@types/react": "^19.0.8",
