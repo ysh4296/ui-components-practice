@@ -1,12 +1,14 @@
 import type { ComponentType } from 'react';
 import Accordions from './components/01_accordion';
+import TabMenus from './components/02_tabMenu/index';
 
 const _routeMap = {
   root: {
     name: 'root',
-    children: ['accordion'],
+    children: ['accordion', 'tabMenu'],
   },
   accordion: { name: '01. 아코디언', Component: Accordions },
+  tabMenu: { name: '02. 탭메뉴', Component: TabMenus },
 };
 
 export type RoutePath = keyof typeof _routeMap;
