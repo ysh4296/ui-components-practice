@@ -5,7 +5,11 @@ import data from './data';
 const TabMenu1 = () => {
   const [currentId, setCurrentId] = useState(data[0].id);
 
-  const current = data.find(({ id }) => id === currentId) ?? data[0];
+  const currentDescription= data.find((item) => item.id === currentId)?.description || 'No description available';
+
+  const toggleTab = (id: string) => {
+    setCurrentId(id);
+  };
 
   return (
     <>
@@ -14,11 +18,11 @@ const TabMenu1 = () => {
         <ul className={cx('tabList')}>
           {data.map(({ id, title }) => (
             <li className={cx('tab', { current: id === currentId })} key={id}>
-              <button type="button" onClick={() => setCurrentId(id)}>{title}</button>
+              <button type="button" onClick={() => toggleTab(id)}>{title}</button>
             </li>
           ))}
         </ul>
-        <div className={cx('description')}>{current.description}</div>
+        <div className={cx('description')}>{currentDescription}</div>
       </div>
     </>
   );
