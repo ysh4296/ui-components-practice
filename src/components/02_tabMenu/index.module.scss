@@ -81,4 +81,44 @@
       }
     }
   }
+
+  .tabMenu3-2 {
+    .tab > button {
+      transition: ease-out 500ms;
+    }
+
+    .tabPanel {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .description {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 15px;
+      opacity: 0;
+      transform: translateY(100%);
+
+      &.current {
+        position: relative;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      &.enter {
+        position: relative;
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity ease-out 300ms 200ms, transform ease-out 500ms;
+      }
+
+      &.exit {
+        opacity: 0;
+        transform: translateY(100%);
+        transition: opacity ease-in 300ms, transform ease-in 500ms;
+      }
+    }
+  }
 }
